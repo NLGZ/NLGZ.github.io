@@ -1,0 +1,42 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "com.sh.run.Main",
+      "projectName": "02_jdbc_mvc"
+    },
+    {
+      "type": "java",
+      "name": "Carexample",
+      "request": "launch",
+      "mainClass": "Test1.Carexample",
+      "projectName": "연습장"
+    },
+    {
+      "type": "java",
+      "name": "ArrayCopyStudy",
+      "request": "launch",
+      "mainClass": "sh.java.array.ArrayCopyStudy",
+      "projectName": "05_array"
+    },
+    {
+      "type": "java",
+      "name": "Test1",
+      "request": "launch",
+      "mainClass": "com.sh.test.Test1",
+      "projectName": "02_variable"
+    },
+    {
+      "type": "db2DevExtSqlSpDbg",
+      "request": "launch",
+      "name": "Db2 Developer Extension Stored Procedure Debug",
+      "program": "${file}"
+    }
+  ]
+}
