@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continuous Fast Moving Image</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #movingImage {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://example.com" target="_blank">
+        <img id="movingImage" src="/images/hyunta.jpg" alt="Hyperlinked Image">
+    </a>
+
+    <script>
+        const image = document.getElementById('movingImage');
+
+        function moveImage() {
+            const maxX = window.innerWidth - image.width;
+            const maxY = window.innerHeight - image.height;
+
+            const randomX = Math.floor(Math.random() * maxX);
+            const randomY = Math.floor(Math.random() * maxY);
+
+            image.style.left = `${randomX}px`;
+            image.style.top = `${randomY}px`;
+
+            requestAnimationFrame(moveImage); // Call the function again for continuous movement
+        }
+
+        // Start continuous movement
+        moveImage();
+    </script>
+</body>
+</html>
