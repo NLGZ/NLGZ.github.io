@@ -3,19 +3,18 @@ body {
 }
 
 img {
-    position:absolute;
+  position: absolute;
   width: 300px;
   border-radius: 50%;
 }
 
-
 body {
-  background-image: url(../images/background.png);
+  background-image: url(/images/background.png);
   background-size: cover;
 }
 
 body {
-  background-image: url(../images/background.png);
+  background-image: url(/images/background.png);
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -25,9 +24,18 @@ body {
 
 h1 {
   font-size: 80px;
-  background: linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red);
-    -webkit-background-clip: text;
-    color: transparent;
+  background: linear-gradient(
+    45deg,
+    violet,
+    indigo,
+    blue,
+    green,
+    yellow,
+    orange,
+    red
+  );
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .links {
