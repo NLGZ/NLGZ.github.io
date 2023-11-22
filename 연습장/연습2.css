@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+img {
+    vertical-align: top;
+}
+.con h2 {
+    font-size: 30px;
+}
+.con{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#pro1{background: url(img/DSCF8457.JPG) center/cover;}

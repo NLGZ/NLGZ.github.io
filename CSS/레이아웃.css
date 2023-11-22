@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    text-decoration: none;
     /* border: 1px solid black; */
    
 }
@@ -24,13 +25,14 @@ header {
     justify-content: space-between;
     width: 100%;
     align-items: center;
-    padding: 1.2rem 0;
+    padding: 1.2rem 20%; /* 여백을 원하는 만큼 조절하세요 */
     background-color: #9BA4B5;
     box-sizing: border-box;
-    
+    text-decoration: none;
 }
 head{
     background-color: #9BA4B5;
+    text-decoration: none;
 }
 header>p {
     font-size: 1.5rem;
@@ -42,25 +44,23 @@ header>ul {
     
 }
 
-header>ul>li{
-    list-style-type: none;
-    margin-left: 1.5rem;
-    text-decoration: none;
-}
-header>ul>li{
+header>ul>li {
     list-style-type: none;
     margin-left: 1.2rem;
+
+    text-decoration: none;
+}
+
+header>ul>li {
     font-weight: 800;
     padding-bottom: 5px;
-     text-decoration: none;
-     color: black;
-    
-
-    
+    color: black;
 }
+
+
 header>ul>li>:first-child>a {
     border-bottom: 5px solid black;
-    
+    text-decoration: none;
     
 }
 header>ul>li>a:hover {
@@ -98,3 +98,22 @@ footer{
 footer>a{
     text-decoration: none;
 }
+
+.div header a:visited{
+    background-color: red;
+}
+header ul li a:hover{
+    color: red;
+}
+
+header ul li a,
+header ul li a:visited {
+    text-decoration: none;
+    color: black; /* Specify the color you want */
+}
+
+header ul li a:hover {
+    text-decoration: none;
+    color: black; /* Specify the color on hover */
+}
+
