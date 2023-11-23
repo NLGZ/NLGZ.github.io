@@ -3,41 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Continuous Fast Moving Image</title>
-    <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-        }
-
-        #movingImage {
-            position: absolute;
-        }
-    </style>
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/mypage.css">
 </head>
 <body>
-    <a href="https://example.com" target="_blank">
-        <img id="movingImage" src="/images/hyunta.jpg" alt="Hyperlinked Image">
-    </a>
-
-    <script>
-        const image = document.getElementById('movingImage');
-
-        function moveImage() {
-            const maxX = window.innerWidth - image.width;
-            const maxY = window.innerHeight - image.height;
-
-            const randomX = Math.floor(Math.random() * maxX);
-            const randomY = Math.floor(Math.random() * maxY);
-
-            image.style.left = `${randomX}px`;
-            image.style.top = `${randomY}px`;
-
-            requestAnimationFrame(moveImage); // Call the function again for continuous movement
-        }
-
-        // Start continuous movement
-        moveImage();
-    </script>
+    <div class="container">
+        <div class="header">
+          <h1><a href="/index.html">HANSEUNGHUN</a></h1>
+          <div class="nav">
+            <ul>
+              <li><a href="/html/mypage.html">INTRODUCTION</a></li>
+              <li><a href="/html/roadmap.html">ROADMAP</a></li>
+              <li><a href="/html/tour.html">TOUR</a></li>
+              <li><a href="/html/membership.html">SIGN-UP</a></li>
+              <li><a href="/html/members.html">MEMBERS</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="hero">
+          <h2>Welcome</h2>
+          <p>
+            I am a dreamer aspiring to become a developer, <br />
+            Han Seung Hoon. I reside in Hwaseong, Gyeonggi-do, <br />
+            and my hobby is riding bikes.
+          </p>
+          <!-- <button>read more</button> -->
+        </div>
+      </div>
 </body>
 </html>
