@@ -1,80 +1,92 @@
-let hero = document.getElementById('hero-slides');
-let menu = document.getElementById('menu');
-let slides = document.getElementById('slides');
-let dribbble = document.getElementById('dribbble');
-let next = [ 'next', 'next-catch' ].map(n => document.getElementById(n));
-let prev = [ 'prev', 'prev-catch' ].map(n => document.getElementById(n));
-let slideChildren = slides.children;
-let slideCount = slides.children.length;
-let currentlyDemoing = false;
-let currentPage = 0;
-let slidesPerPage = () => window.innerWidth > 1700 ? 4 : window.innerWidth > 1200 ? 3 : 2;
-let maxPageCount = () => slideCount / slidesPerPage() - 1;
+// let mainText1 = document.querySelector("#s1>h1");
 
-function goToPage(pageNumber = 0) {
-	currentPage = Math.min(maxPageCount(), Math.max(0, pageNumber));
-	console.log(currentPage);
-	hero.style.setProperty('--page', currentPage);
-}
+// window.addEventListener("scroll", function () {
+//   let value = window.scrollY;
+//   console.log("scrollY", value);
 
-function sleep(time) {
-	return new Promise(res => setTimeout(res, time));
-}
-
-function hoverSlide(index) {
-	index in slideChildren &&
-		slideChildren[index].classList.add('hover');
-}
-
-function unhoverSlide(index) {
-	index in slideChildren &&
-		slideChildren[index].classList.remove('hover');
-}
-
-async function demo() {
-	if(currentlyDemoing) {
-		return;
-	}
-	currentlyDemoing = true;
-	if(currentPage !== 0) {
-		goToPage(0);
-		await sleep(800);
-	}
-	let slides = slidesPerPage();
-	let pageSeq_ = { 2: [ 1, 2, 1 ], 3: [ 1, 2, 1 / 3 ], 4: [ 1, 1, 0 ] };
-	let pageSeq = pageSeq_[slides] || pageSeq_[4];
-	let slideSeq_ = { 2: [ 2, 4, 3 ], 3: [ 3, 6, 2 ], 4: [ 3, 6, 2 ] };
-	let slideSeq = slideSeq_[slides] || slideSeq_[2];
-	await sleep(300);
-	goToPage(pageSeq[0]);
-	await sleep(500);
-	hoverSlide(slideSeq[0]);
-	await sleep(1200);
-	goToPage(pageSeq[1]);
-	dribbble.classList.add('hover');
-	unhoverSlide(slideSeq[0]);
-	await sleep(500);
-	hoverSlide(slideSeq[1]);
-	await sleep(1200);
-	goToPage(pageSeq[2]);
-	unhoverSlide(slideSeq[1]);
-	await sleep(300);
-	hoverSlide(slideSeq[2]);
-	await sleep(1600);
-	goToPage(0);
-	unhoverSlide(slideSeq[2]);
-	dribbble.classList.remove('hover');
-	currentlyDemoing = false;
-}
-
-next.forEach(n => n.addEventListener('click', () => !currentlyDemoing && goToPage(currentPage + 1)));
-prev.forEach(n => n.addEventListener('click', () => !currentlyDemoing && goToPage(currentPage - 1)));
-menu.addEventListener('click', demo);
-
-sleep(100).then(demo);
-
-// window.addEventListener('resize', () => {
-	// console.log(document.body.style.getPropertyValue('--slide-per-page'));
+//   if (value > 150) {
+//     mainText1.style.animation = "textVanish 1s ease-out forwards";
+//   } else {
+//     mainText1.style.animation = "textSlide 1s ease-out";
+//   }
 // });
 
-/* requestAnimationFrame */
+// let descriptionText2 = document.querySelector("#s1>p");
+
+// window.addEventListener("scroll", function () {
+//   let value = window.scrollY;
+//   console.log("scrollY", value);
+
+//   if (value > 150) {
+//     descriptionText2.style.animation = "textVanish 1s ease-out forwards";
+//   } else {
+//     descriptionText2.style.animation = "textSlide 1s ease-out";
+//   }
+// });
+
+let mainText1 = document.querySelector("#s1>h1");
+let descriptionText1 = document.querySelector("#s1>p");
+
+window.addEventListener("scroll", function () {
+  let value = window.scrollY;
+  // console.log("scrollY", value);
+
+  if (value > 150) {
+    mainText1.style.animation = "textVanish 1s ease-out forwards";
+    descriptionText1.style.animation = "textVanish 1s ease-out forwards";
+  }
+  if (value < 150) {
+    mainText1.style.animation = "textSlide 1s ease-out";
+    descriptionText1.style.animation = "textSlide 1s ease-out";
+  }
+});
+
+let mainText2 = document.querySelector("#s2>h1");
+let descriptionText2 = document.querySelector("#s2>p");
+
+window.addEventListener("scroll", function () {
+  let value = window.scrollY;
+  console.log("scrollY", value);
+
+  if (value > 1400) {
+    mainText2.style.animation = "textVanish 1s ease-out forwards";
+    descriptionText2.style.animation = "textVanish 1s ease-out forwards";
+  } else {
+    mainText2.style.animation = "textSlide 1s ease-out";
+    descriptionText2.style.animation = "textSlide 1s ease-out";
+  }
+});
+
+let mainText3 = document.querySelector("#s3>h1");
+let descriptionText3 = document.querySelector("#s3>p");
+
+window.addEventListener("scroll", function () {
+  let value = window.scrollY;
+  // console.log("scrollY", value);
+
+  if (value > 2300) {
+    mainText3.style.animation = "textVanish 1s ease-out forwards";
+    descriptionText3.style.animation = "textVanish 1s ease-out forwards";
+  } else {
+    mainText3.style.animation = "textSlide 1s ease-out";
+    descriptionText3.style.animation = "textSlide 1s ease-out";
+  }
+});
+
+let mainText4 = document.querySelector("#s4>h1");
+let descriptionText4 = document.querySelector("#s4>p");
+
+window.addEventListener("scroll", function () {
+  let value = window.scrollY;
+  // console.log("scrollY", value);
+
+  if (value > 3500) {
+    mainText4.style.animation = "textVanish 1s ease-out forwards";
+    descriptionText4.style.animation = "textVanish 1s ease-out forwards";
+  } else {
+    mainText4.style.animation = "textSlide 1s ease-out";
+    descriptionText4.style.animation = "textSlide 1s ease-out";
+  }
+});
+
+//위에 사용

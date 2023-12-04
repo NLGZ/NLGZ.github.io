@@ -1,34 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/CSS/mypage.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mypage</title>
+    <link rel="stylesheet" href="/CSS/mypage.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="container">
-        <div class="header">
-          <h1><a href="/index.html">HANSEUNGHUN</a></h1>
-          <div class="nav">
-            <ul>
-              <li><a href="/html/mypage.html">INTRODUCTION</a></li>
-              <li><a href="/html/roadmap.html">ROADMAP</a></li>
-              <li><a href="/html/tour.html">TOUR</a></li>
-              <li><a href="/html/membership.html">SIGN-UP</a></li>
-              <li><a href="/html/members.html">MEMBERS</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="hero">
-          <h2>Welcome</h2>
-          <p>
-            I am a dreamer aspiring to become a developer, <br />
-            Han Seung Hoon. I reside in Hwaseong, Gyeonggi-do, <br />
-            and my hobby is riding bikes.
-          </p>
-          <!-- <button>read more</button> -->
+      <div class="header">
+        <h1 ><a href="/index.html"><img class="logo" src="/images/NLGZlogo.png" alt="로고"></a></h1>
+        <div class="nav">
+          <ul>
+            <li><a href="/html/mypage.html">INTRODUCTION</a></li>
+            <li><a href="/html/roadmap.html">ROADMAP</a></li>
+            <li><a href="/html/tour.html">TOUR</a></li>
+            <li><a href="/html/membership.html">SIGN-UP</a></li>
+            <li><a href="/html/members.html">MEMBERS</a></li>
+          </ul>
         </div>
       </div>
-</body>
+      <section class="main">
+        <div class="profile-card">
+          <div class="image">
+            <img
+              src="/images/자기소개프사.jpg"
+              alt=""
+              class="profile-pic"
+              style="border-radius: 15px"
+            />
+          </div>
+          <div class="data">
+            <h2>HAN SEUNGHUN</h2>
+            <span>Aspiring developer.</span>
+          </div>
+          <div class="row">
+            <div class="info">
+              <h3>Following</h3>
+              <span>120</span>
+            </div>
+            <div class="info">
+              <h3>Followers</h3>
+              <span>5000</span>
+            </div>
+            <div class="info">
+              <h3>Posts</h3>
+              <span>209</span>
+            </div>
+          </div>
+          <div class="buttons">
+            <a href="https://www.youtube.com/@user-vk3wn8wb5u" class="btn"
+              >Youtube</a
+            >
+
+            <a href="https://github.com/NLGZ" class="btn">github</a>
+          </div>
+        </div>
+        <div class="mainAbout">
+          <h2>👩🏻‍💻 ABOUT ME</h2>
+          <p class="about">
+            안녕하세요. 저는 한승훈 이라고 합니다.<br />
+            저는 경찰행정학과 출신의 백엔드 개발자 지망생 입니다.<br />
+            어렸을 적 부터 컴퓨터에 관심이 많았고, 웹 개발의 매력을 느껴<br />
+            백엔드 개발을 공부하고 있습니다. 현재는 KH정보교육원을 다니며<br />
+            프로그래밍의 기초지식을 쌓고 있습니다. 또한
+            홈페이지 개인<br />
+            프로젝트를 진행하며 새로운 기술을 습득하고 있습니다. 앞으로도<br />
+            끊임없이 공부하고 노력하여, 뛰어난 백엔드 개발자가 되기 위해
+            최선을<br />
+            다하겠습니다.
+          </p>
+        </div>
+      </section>
+    </div>
+    <script src="/js/mypage.js"></script>
+  </body>
 </html>

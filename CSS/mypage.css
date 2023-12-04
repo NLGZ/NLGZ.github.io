@@ -1,0 +1,176 @@
+/* @font-face {
+    font-family: abster;
+    src: url(../font/abster-webfont.woff) format('woff');
+    
+} */
+h1 > a {
+  font-family: "Saira Stencil One", sans-serif;
+}
+
+.container {
+  background-image: url("/images/비행기.jpg");
+  background-size: cover;
+}
+
+* {
+  margin: 0;
+
+  box-sizing: border-box;
+}
+
+h2 {
+  font-size: 45px;
+}
+img {
+  width: 250px;
+  height: auto;
+  margin-top: 40px;
+}
+.about {
+  line-height: 1.5;
+  font-size: 30px;
+}
+.mainAbout {
+  padding: 55px;
+}
+.main {
+  color: white;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+
+  background-size: cover;
+}
+
+.container .header {
+  width: 80%;
+  height: 80px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container .header h1 a {
+  text-decoration: none;
+  font-weight: 300;
+  color: white;
+  font-family: "Saira Stencil One", sans-serif;
+}
+
+.container .nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.container .nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.container .nav ul li a:hover {
+  color: rgba(233, 232, 232, 0.729);
+  border-bottom: 7px solid gray;
+}
+
+.container .hero {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  padding: 40px;
+  /* 임시폰트 적용x */
+  /* font-family: 'Smooch Sans', sans-serif; */
+}
+
+.container .hero h2 {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+.container .hero p {
+  font-size: 22px;
+}
+
+.main {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-image: url(images/back.jpg); */
+  background-position: center;
+  background-size: cover;
+}
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  width: 100%;
+  border-radius: 25px;
+  padding: 30px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 01),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  /* background-color: rgba(100, 74, 214, 0.299); */
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  margin-left: 130px;
+  margin-right: 110px;
+}
+.image {
+  position: relative;
+  height: 280px;
+  width: 280px;
+  /* border-radius: 50%; */
+}
+.image .profile-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+.data h2 {
+  font-size: 33px;
+  font-weight: 600;
+}
+span {
+  font-size: 18px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+.row .info {
+  text-align: center;
+  padding: 0 20px;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+.buttons .btn {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 20px;
+  padding: 8px 25px;
+  border-radius: 25px;
+  font-size: 18px;
+  white-space: nowrap;
+  background: linear-gradient(to left, #c07315 0%, #c7c7c7 100%);
+}
+.buttons .btn:hover {
+  box-shadow: inset 0 5px 20px rgba(0, 0, 0, 0.4);
+}
