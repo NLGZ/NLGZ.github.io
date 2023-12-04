@@ -3,69 +3,75 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>회원가입 page</title>
+    <title>회원가입</title>
     <link rel="stylesheet" href="/CSS/membership.css" />
   </head>
   <body>
-    <div class="header">
-      <h1><a href="/index.html">HANSEUNGHUN</a></h1>
-      <div class="nav">
-        <ul>
-          <li><a href="/html/mypage.html">INTRODUCTION</a></li>
-          <li><a href="/html/roadmap.html">ROADMAP</a></li>
-          <li><a href="/html/tour.html">TOUR</a></li>
-          <li><a href="/html/membership.html">SIGN-UP</a></li>
-          <li><a href="/html/members.html">MEMBERS</a></li>
-        </ul>
-      </div>
-    </div>
     <div class="container">
-        
       <div class="row header">
-        <h1>Welcome &nbsp;</h1>
-        <h3>Join us as a valued customer!</h3>
+        <h1><strong><a href="/html/realindex.html">Welcome</strong></a> &nbsp;</h1>
+        <h3><strong>>Join us as a valued customer!</strong></h3>
       </div>
       <div class="row body">
-        <form action="#">
+        <form
+          name="membershipForm"
+          action="javascript:saveMember();"
+          id="memberFrm"
+        >
           <ul>
             <li>
               <p class="left">
-                <label for="first_name">first name</label>
-                <input type="text" name="first_name" placeholder="John" />
+                <label for="username">name<span class="req">*</span> </label>
+                <input type="text" id="username" name="username" required />
               </p>
               <p class="pull-right">
-                <label for="last_name">last name</label>
-                <input type="text" name="last_name" placeholder="Smith" />
-              </p>
-              <p class="pull-right">
-                <label for="last_name">last name</label>
-                <input type="text" name="last_name" placeholder="Smith" />
-              </p>
-            </li>
-
-            <li>
-              <p>
-                <label for="email">email <span class="req">*</span></label>
+                <label for="userId">ID<span class="req">*</span></label>
                 <input
-                  type="email"
-                  name="email"
-                  placeholder="john.smith@gmail.com"
+                  type="text"
+                  id="userId"
+                  placeholder="띄어쓰기 없이 영/숫자 6~10자"
+                  required
                 />
               </p>
-            </li>
-            <li><div class="divider"></div></li>
-            <li>
-              <label for="comments">comments</label>
-              <textarea cols="46" rows="3" name="comments"></textarea>
+              <p class="pull-right">
+                <label for="password">password<span class="req">*</span></label>
+                <input
+                  type="password"
+                  id="password"
+                  placeholder="8-15자의 영문 대소문자, 숫자 또는 특수문자"
+                  required
+                />
+              </p>
+
+              <div>
+                <label for="confirmPassword">password-Dashe</label>
+                <input type="password" id="confirmPassword" required />
+              </div>
             </li>
 
             <li>
-              <input class="btn btn-submit" type="submit" value="Submit" />
-              <small>or press <strong>enter</strong></small>
+              <label for="comments">comments</label>
+              <textarea
+                cols="46"
+                rows="3"
+                id="comments"
+                name="comments"
+                placeholder="홈페이지 주인에게 하고싶으신 말씀"
+              ></textarea>
+            </li>
+
+            <li>
+              <input
+                class="submit"
+                type="submit"
+                value="Complete Registration"
+              />
             </li>
           </ul>
         </form>
       </div>
     </div>
+    <script src="/js/membership.js"></script>
   </body>
 </html>
+
