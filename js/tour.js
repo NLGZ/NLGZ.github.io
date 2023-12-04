@@ -29,7 +29,7 @@ let descriptionText1 = document.querySelector("#s1>p");
 
 window.addEventListener("scroll", function () {
   let value = window.scrollY;
-  // console.log("scrollY", value);
+  console.log("scrollY", value);
 
   if (value > 150) {
     mainText1.style.animation = "textVanish 1s ease-out forwards";
